@@ -2,6 +2,8 @@ import streamlit as st
 import numpy as np
 import pytesseract #pythn wrapper for the OCR software
 from PIL import Image
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+
 st.title('OPTICAL CHARACTER RECOGNITION')
 st.text('upload the image')
 Uploaded_file = st.sidebar.file_uploader('choose an image:', type = ["jpg","png","jpeg"])#create a file uploader in the sidebar
